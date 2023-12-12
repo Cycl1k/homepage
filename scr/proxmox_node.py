@@ -1,5 +1,5 @@
 from proxmoxer import ProxmoxAPI
-from g.components import bInGbConvert, percentConvert
+from scr.components import *
 
 #Удаление ебучих уведомлений в консоли
 import urllib3

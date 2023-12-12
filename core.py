@@ -1,5 +1,5 @@
 from flask import render_template, Flask, jsonify
-from g.proxmox_node import *
+from scr.proxmox_node import *
 
 app = Flask(__name__)
 
