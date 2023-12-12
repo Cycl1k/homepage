@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block node %}
+    <div class="nodes_block">
+        
+        {% for x in node %}
+        <div class="node_elements">
+            <div class="node_name">{{node[x].node_id}}</div>
+            <div class="node_uptime">
+                <div id=time{{x}} ></div>
+            </div>    
+            
+        </div>
+        {% endfor%}
+    </div>
+{% endblock %}

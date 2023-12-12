@@ -1,0 +1,32 @@
+.homepage {
+    background-color: black;
+}
+.nodes_block{
+    background-color: #e1e1e1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.node_elements{
+    margin: 15px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #6e6e6e;
+    height: 150px;
+    width: 450px;
+}
+.node_name{
+    margin-left: 15px;
+    margin-top: 20px;
+    font-size: 21px;
+}
+
+.node_uptime{
+    margin: 15px;
+    border-radius: 15px 15px 15px 15px;
+    background-color: #03f5f5;
+    height: 50px;
+    width: 50px;
+}
