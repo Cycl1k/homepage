@@ -6,8 +6,14 @@
         {% for x in node %}
         <div class="node_elements">
             <div class="node_name">{{node[x].node_id}}</div>
-            <div class="node_uptime">
-                <div id=time{{x}} ></div>
+            <div class="node_monitoring">
+                <div id=node_uptime{{x}} ></div>
+                <div id=node_core_load{{x}} ></div>
+                <div id=node_core{{x}} ></div>
+                <div id=node_ram_moment{{x}} ></div>
+                <div id=node_os_disk_total{{x}} ></div>
+                <div id=node_os_disk_moment{{x}} ></div>
+                <div id=node_status{{x}} ></div>
             </div>    
             
         </div>
