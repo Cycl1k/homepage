@@ -7,7 +7,8 @@ setInterval(function(){$.ajax({
             $("#node_uptime"+i).html(response[i]["node_uptime"]); 
             $("#node_core_load"+i).html(response[i]["node_core_load"]); 
             $("#node_core"+i).html(response[i]["node_core"]); 
-            $("#node_ram_moment"+i).html(response[i]["mem"]); 
+            $("#node_ram_moment"+i).html(response[i]["node_ram_moment"]); 
+            $("#node_ram_total"+i).html(response[i]["node_ram_total"]); 
             $("#node_os_disk_total"+i).html(response[i]["node_os_disk_total"]); 
             $("#node_os_disk_moment"+i).html(response[i]["node_os_disk_moment"]); 
             $("#node_status"+i).html(response[i]["node_status"]); 
@@ -22,4 +23,4 @@ setTimeout(function(){
 
     location.reload();
 
-}, 1000);
+}, 10000);

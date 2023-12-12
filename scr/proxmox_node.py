@@ -38,7 +38,8 @@ def proxmox_names():
     for node in proxmox.nodes.get():
         
         proxDict.update({ counetr : {
-            'node_id': node['node']
+            'node_id': node['node'],
+            'node_status': node['status']
         }})
         counetr +=1
     return proxDict

@@ -1,7 +1,7 @@
 .homepage {
     background-color: black;
 }
-.nodes_block{
+.chapter{
     background-color: #e1e1e1;
     width: 100%;
     display: flex;
@@ -10,23 +10,64 @@
     justify-content: left;
 }
 
-.node_elements{
+.block{
     margin: 15px;
     border-radius: 15px 15px 15px 15px;
     background-color: #6e6e6e;
-    height: 150px;
+    height: 110px;
     width: 450px;
 }
-.node_name{
-    margin-left: 15px;
-    margin-top: 20px;
-    font-size: 21px;
+
+.info{
+    display: flex;
+    width: 100%;
 }
 
-.node_uptime{
-    margin: 15px;
+.name{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 21px;
+    justify-content: left;
+    width: 95%;
+}
+
+.status{
+    margin-top: 5px;
+    margin-right: 5px;
+    color: black;
+}
+
+.uptime_text{
+    display: flex;
+    font-size: 17px;
+    margin-left: 30px;
+}
+.uptime{
+    font-size: 17px;
+}
+
+.monitoring{
+    display: flex;
+    justify-content: center;
+}
+
+
+.infoblock{
+    margin-left: 5px;
     border-radius: 15px 15px 15px 15px;
     background-color: #03f5f5;
     height: 50px;
-    width: 50px;
+    width: 30%;
+    justify-content: center;
+}
+
+.dinamickinfo{
+    display: flex;
+    justify-content: center;
+}
+
+.staticinfo{
+    
+    font-size: 17px;
+    justify-content: center;
 }

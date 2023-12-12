@@ -1,19 +1,45 @@
 {% extends 'base.html' %}
 
 {% block node %}
-    <div class="nodes_block">
+    <div class="chapter">
         
         {% for x in node %}
-        <div class="node_elements">
-            <div class="node_name">{{node[x].node_id}}</div>
-            <div class="node_monitoring">
-                <div id=node_uptime{{x}} ></div>
-                <div id=node_core_load{{x}} ></div>
-                <div id=node_core{{x}} ></div>
-                <div id=node_ram_moment{{x}} ></div>
-                <div id=node_os_disk_total{{x}} ></div>
-                <div id=node_os_disk_moment{{x}} ></div>
-                <div id=node_status{{x}} ></div>
+        <div class="block">
+            <div class="info">
+                <div class="name">{{node[x].node_id}}</div>
+                <div class="status" id=node_status{{x}} ></div>
+            </div>
+                <div class="uptime_text"> Uptime: 
+                    <div class="uptime" id=node_uptime{{x}} ></div>
+                </div>
+            <div class="monitoring">
+                <div class="infoblock">
+                    <div class="dinamickinfo">
+                        <div id=node_core_load{{x}} ></div>
+                        <div>/</div>
+                        <div id=node_core{{x}} ></div>
+                    </div>
+                    <div class="staticinfo">CPU</div>
+                </div>
+
+                <div class="infoblock">
+                    <div class="dinamickinfo">
+                        <div id=node_ram_moment{{x}} ></div>
+                        <div>/</div>
+                        <div id=node_ram_total{{x}} ></div>
+                    
+                    </div>
+                    <div class="staticinfo">RAM</div>
+                </div>
+
+                <div class="infoblock">
+                    <div class="dinamickinfo">
+                        <div id=node_os_disk_moment{{x}} ></div>
+                        <div>/</div>
+                        <div id=node_os_disk_total{{x}} ></div>    
+                </div>
+                    <div class="staticinfo">OS Disk</div>
+                </div>
             </div>    
             
         </div>
