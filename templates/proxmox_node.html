@@ -1,0 +1,65 @@
+<div class="block_info">
+    <div class="name">Proxmox</div>
+    <div class="divTable">
+        <div class="divTableBody">
+            <div class="divTableRow">
+                <div class="divTableCell">Name</div>
+                <div class="divTableCell">Uptime</div>
+                <div class="divTableCell">Status</div>
+                <div class="divTableCell">CPU</div>
+                <div class="divTableCell">RAM</div>
+            </div>
+            
+
+        {% for x in node %}    
+            <div class="divTableRow">
+                <div class="divTableCell">
+                    <div id=node_id{{x}} ></div>
+                </div>
+                <div class="divTableCell">
+                    <div id=node_uptime{{x}} ></div>
+                </div>
+                <div class="divTableCell">
+                    <div id=node_status{{x}} ></div>
+                </div>
+                <div class="divTableCell">
+                    <div class="divTableFlexBody">
+                        <div id=node_core_load{{x}} ></div>
+                        <div>%/</div>
+                        <div id=node_core{{x}} ></div>
+                    </div>
+                </div>
+                <div class="divTableCell">
+                    <div class="divTableFlexBody">
+                        <div id=node_ram_moment{{x}} ></div>
+                        <div> GB/</div>
+                        <div id=node_ram_total{{x}} ></div>
+                        <div> GB</div>
+                    </div>    
+                </div>
+            </div>
+        {% endfor%}
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    setInterval(function(){$.ajax({
+        url: '/update_node',
+        type: 'POST',
+        success: function(response) {
+            for (let i=0; i<=response[-1]; i++){
+                $("#node_id"+i).html(response[i]["node_id"]); 
+                $("#node_uptime"+i).html(response[i]["node_uptime"]); 
+                $("#node_core_load"+i).html(response[i]["node_core_load"]); 
+                $("#node_core"+i).html(response[i]["node_core"]); 
+                $("#node_ram_moment"+i).html(response[i]["node_ram_moment"]); 
+                $("#node_ram_total"+i).html(response[i]["node_ram_total"]);
+                $("#node_status"+i).html(response[i]["node_status"]); 
+            }
+        },
+        error: function(error) {
+            console.log(error);
+        }
+    })}, 10000); 
+</script>

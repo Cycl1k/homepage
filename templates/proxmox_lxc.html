@@ -1,0 +1,72 @@
+    <div class="block_info">
+        <div class="name">LXC</div>
+        <div class="divTable">
+            <div class="divTableBody">
+                <div class="divTableRow">
+                    <div class="divTableCell">Name</div>
+                    <div class="divTableCell">ID</div>
+                    <div class="divTableCell">Uptime</div>
+                    <div class="divTableCell">Status</div>
+                    <div class="divTableCell">CPU</div>
+                    <div class="divTableCell">RAM</div>
+                </div>
+                
+
+            {% for x in lxc %}    
+                <div class="divTableRow">
+                    <div class="divTableCell">
+                        <div id=lxc_name{{x}} ></div>
+                    </div>
+                    <div class="divTableCell">
+                        <div id=lxc_id{{x}} ></div>
+                    </div>
+                    <div class="divTableCell">
+                        <div id=lxc_uptime{{x}} ></div>
+                    </div>
+                    <div class="divTableCell">
+                        <div id=lxc_status{{x}} ></div>
+                    </div>
+                    <div class="divTableCell">
+                        <div class="divTableFlexBody">
+                            <div id=lxc_core_load{{x}} ></div>
+                            <div>/</div>
+                            <div id=lxc_core{{x}} ></div>
+                        </div>
+                    </div>
+                    <div class="divTableCell">
+                        <div class="divTableFlexBody">
+                            <div id=node_ram_moment{{x}} ></div>
+                            <div>/</div>
+                            <div id=node_ram_total{{x}} ></div>
+                        </div>    
+                    </div>
+                </div>
+            {% endfor%}
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        setInterval(function(){$.ajax({
+            url: '/update_lxc',
+            type: 'POST',
+            success: function(response) {
+                for (let i=0; i<=response[-1]; i++){
+                    $("#lxc_name"+i).html(response[i]["lxc_name"]); 
+                    $("#lxc_id"+i).html(response[i]["lxc_id"]); 
+                    $("#lxc_uptime"+i).html(response[i]["lxc_uptime"]); 
+                    $("#lxc_core_load"+i).html(response[i]["lxc_cpu_load"]); 
+                    $("#lxc_core"+i).html(response[i]["lxc_vcpu"]); 
+                    $("#lxc_ram_moment"+i).html(response[i]["lxc_ram_moment"]); 
+                    $("#lxc_ram_total"+i).html(response[i]["lxc_ram_total"]);
+                    $("#lxc_status"+i).html(response[i]["lxc_status"]); 
+                }
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        })}, 10000); 
+    </script>

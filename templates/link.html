@@ -1,0 +1,13 @@
+<div>
+    <div class = "blockLink">     
+        {% for x in link %}
+                    <a href={{link[x].link}}> 
+                        <i class='{{link[x].icon}}'></i>
+                        <span class="nav_name">{{ link[x].name}}</span> 
+                    </a>
+        {% endfor %}    
+    </div>
+
+
+    
+</div>

@@ -1,0 +1,102 @@
+{
+    "0" : {
+        "name": "GitHub",
+        "link": "https://github.com",
+        "icon": "bx bxl-github"
+    },
+    "1": {
+        "name": "Reddit",
+        "link": "https://reddit.com",
+        "icon": "bx bxl-reddit"
+    },
+    "2": {
+        "name": "IRL",
+        "link": "https://irl.su",
+        "icon": "bx bxl-sitemap"
+    },
+    "3": {
+        "name": "Pinterest",
+        "link": "https://pinterest.com",
+        "icon": "bx bxl-pinterest"
+    },
+    "4": {
+        "name": "GitLab",
+        "link": "https://gitlab.com",
+        "icon": "bx bxl-gitlab"
+    },
+    "5" : {
+        "name": "GitHub",
+        "link": "https://github.com",
+        "icon": "bx bxl-github"
+    },
+    "6": {
+        "name": "Reddit",
+        "link": "https://reddit.com",
+        "icon": "bx bxl-reddit"
+    },
+    "7": {
+        "name": "IRL",
+        "link": "https://irl.su",
+        "icon": "bx bxl-sitemap"
+    },
+    "8": {
+        "name": "Pinterest",
+        "link": "https://pinterest.com",
+        "icon": "bx bxl-pinterest"
+    },
+    "9": {
+        "name": "GitLab",
+        "link": "https://gitlab.com",
+        "icon": "bx bxl-gitlab"
+    },
+    "10" : {
+        "name": "GitHub",
+        "link": "https://github.com",
+        "icon": "bx bxl-github"
+    },
+    "11": {
+        "name": "Reddit",
+        "link": "https://reddit.com",
+        "icon": "bx bxl-reddit"
+    },
+    "12": {
+        "name": "IRL",
+        "link": "https://irl.su",
+        "icon": "bx bxl-sitemap"
+    },
+    "13": {
+        "name": "Pinterest",
+        "link": "https://pinterest.com",
+        "icon": "bx bxl-pinterest"
+    },
+    "14": {
+        "name": "GitLab",
+        "link": "https://gitlab.com",
+        "icon": "bx bxl-gitlab"
+    },
+    "15" : {
+        "name": "GitHub",
+        "link": "https://github.com",
+        "icon": "bx bxl-github"
+    },
+    "16": {
+        "name": "Reddit",
+        "link": "https://reddit.com",
+        "icon": "bx bxl-reddit"
+    },
+    "17": {
+        "name": "IRL",
+        "link": "https://irl.su",
+        "icon": "bx bxl-sitemap"
+    },
+    "18": {
+        "name": "Pinterest",
+        "link": "https://pinterest.com",
+        "icon": "bx bxl-pinterest"
+    },
+    "19": {
+        "name": "GitLab",
+        "link": "https://gitlab.com",
+        "icon": "bx bxl-gitlab"
+    }
+}

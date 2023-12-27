@@ -1,73 +1,81 @@
-.homepage {
-    background-color: black;
-}
-.chapter{
-    background-color: #e1e1e1;
-    width: 100%;
+body {
+    background-color: rgb(30, 30, 30);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
 }
 
-.block{
+.block_info{
+    background-color: rgb(68, 68, 68);
     margin: 15px;
-    border-radius: 15px 15px 15px 15px;
-    background-color: #6e6e6e;
-    height: 110px;
-    width: 450px;
-}
+    width: 600px;
+    border-radius: 5px 5px 5px 5px;
+    justify-content: center;
 
-.info{
-    display: flex;
-    width: 100%;
 }
 
 .name{
-    margin-left: 15px;
-    margin-top: 10px;
-    font-size: 21px;
-    justify-content: left;
-    width: 95%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Helvetica;
+}
+.blockLink{
+    background-color: rgb(68, 68, 68);
+    margin: 15px;
+    width: 600px;
+    border-radius: 5px 5px 5px 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.status{
-    margin-top: 5px;
-    margin-right: 5px;
+a {
+    text-decoration: none;
+    outline-color: transparent;
+    text-align: center;
+    line-height: 3;
     color: black;
-}
-
-.uptime_text{
-    display: flex;
-    font-size: 17px;
-    margin-left: 30px;
-}
-.uptime{
-    font-size: 17px;
-}
-
-.monitoring{
-    display: flex;
-    justify-content: center;
-}
-
-
-.infoblock{
-    margin-left: 5px;
-    border-radius: 15px 15px 15px 15px;
-    background-color: #03f5f5;
-    height: 50px;
-    width: 30%;
-    justify-content: center;
-}
-
-.dinamickinfo{
-    display: flex;
-    justify-content: center;
-}
-
-.staticinfo{
+  }
+  
+  a:link,
+  a:visited,
+  a:focus {
+    color: black;
     
-    font-size: 17px;
-    justify-content: center;
+    margin: 15px;
+    border-radius: 5px 5px 5px 5px;
+  }
+  
+  a:hover {
+    background: orange;
+  }
+  
+  a:active {
+    background: darkred;
+    color: white;
+  }
+
+.divTable{
+	display: table;
+	width: 100%;
+    margin: 15px;
+}
+
+.divTableBody {
+	display: table-row-group;
+}
+
+.divTableFlexBody{
+    display: flex;
+}
+.divTableRow {
+	display: table-row;
+}
+
+.divTableCell, .divTableHead {
+	display: table-cell;
+	padding: 3px 10px;
+    font-family: Helvetica;
 }

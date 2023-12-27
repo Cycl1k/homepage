@@ -1,13 +1,15 @@
 <!DOCTYPE html>
    <head>
         <link rel="stylesheet" href="{{ url_for('static', filename= 'css/base.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="{{ url_for ('static', filename = 'js/reload_nodes.js')}}"></script>
+        <!--<script src="{{ url_for ('static', filename = 'js/reload_nodes.js')}}"></script>-->
    </head>
    <body>
-        <div class="homepage">
-            {% block node %}
-            {% endblock %}
-        </div>
+      {% include "link.html"%}
+      {% include "proxmox_node.html"%}
+      {% include "proxmox_vm.html"%}
+      {% include "proxmox_lxc.html"%}
+          
    </body>
 </html>
