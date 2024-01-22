@@ -5,7 +5,7 @@ from components import *
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-proxmox = ProxmoxAPI ('192.168.0.251', user = 'root@pam', password = 'print(Razer&ProxmoxX3)', verify_ssl = False, service='PVE')
+proxmox = ProxmoxAPI ('IP address', user = 'root@pam', password = 'password', verify_ssl = False, service='PVE')
 
 def proxmox_cluster():
     print(proxmox.cluster.status.get())
